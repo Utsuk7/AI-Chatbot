@@ -7,8 +7,9 @@ name = "pypi"
 langchain = "*"
 langchain-community = "*"
 langchain-huggingface = "*"
-faiss-cpu = "*"
 pypdf = "*"
+faiss-cpu = "*"
+sentence-transformers = "*"
 
 [dev-packages]
 
