@@ -43,26 +43,36 @@ GOOGLE_API_KEY=your_google_api_key_here
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 
+
 # 2. Install Pipenv
 pip install pipenv
+
 
 # 3. Install Project Dependencies from Pipfile
 pipenv install
 
+
 # 4. Activate the Virtual Environment
 pipenv shell
+
 
 # 5. Add Your PDF Files
 # 👉 Place all .pdf documents you want to query into the 'data/' directory
 
-# 6. Run the Indexer
-# ⚙️ This script loads PDFs, splits them into chunks, embeds them, and stores them in a FAISS vector DB
-python main.py
+
+# 6. 🆕 Update Memory
+After placing new PDF files in the `data/` directory, you need to create chunks and generate embeddings for them.
+
+Run the following command to update the FAISS vector store with the new PDFs:
+```bash
+python create_memory_for_llm.py
+
 
 # 7. Start the Chatbot
 
 # ✅ Terminal Interface
 python connect_memory_with_llm.py
+
 
 # ✅ Web Interface (Streamlit)
 streamlit run app.py
