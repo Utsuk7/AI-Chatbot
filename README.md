@@ -32,9 +32,9 @@ This project is an AI-powered chatbot that allows users to query PDF documents c
 
 ## ⚙️ .env Configuration
 
-Create a `.env` file in the root directory with:
 
 ```env
+HF_TOKEN=your_hugging_face_api_key_here
 GOOGLE_API_KEY=your_google_api_key_here
 
 
