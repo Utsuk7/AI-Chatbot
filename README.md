@@ -62,7 +62,7 @@ python main.py
 # 7. Start the Chatbot
 
 # ✅ Terminal Interface
-python main.py
+python connect_memory_with_llm.py
 
 # ✅ Web Interface (Streamlit)
 streamlit run app.py
