@@ -28,7 +28,41 @@ This project is an AI-powered chatbot that allows users to query PDF documents c
 - **Pipenv** – for environment and dependency management  
 - **dotenv** – for secure secret and config handling
 
+
+
+## 🚀 Features
+
+- 🧠 **Query-Response System**  
+  Ask questions and get precise, context-aware answers based on your uploaded PDF documents.
+
+- 📁 **Document Upload Support** *(Planned)*  
+  Easily upload PDF files through the Streamlit interface (to be integrated, under development).
+
+- 📝 **Conversational Memory**  
+  Maintains context across turns using LangChain's `ConversationBufferMemory` for more natural, flowing interactions.
+
+- 🗃️ **Source Document Citation**  
+  Every answer includes references to the documents and the exact text chunk from which the answer was derived.
+
+- 💬 **Dual Interface (CLI + Web UI)**  
+  - Terminal-based interactive chat using `python connect_memory_with_llm.py`  
+  - Web-based chat via `Streamlit` in `app.py`
+
+- 💾 **Downloadable Chat History**   
+  Enable users to download or export their chat conversations.
+
+- ⚙️ **FAISS-based Vector Store**  
+  Efficient document retrieval using FAISS for storing and querying semantic embeddings.
+
+- 🔐 **Secure Environment Variable Handling**  
+  All sensitive keys like `GOOGLE_API_KEY` are managed via a `.env` file.
+
+- 🔄 **Easy Re-indexing of New PDFs**  
+  Just run `python create_memory_for_llm.py` to process newly added PDFs (automatic embedding creation---> future work).
+
+
 ---
+
 
 ## ⚙️ .env Configuration
 
@@ -40,8 +74,8 @@ GOOGLE_API_KEY=your_google_api_key_here
 
 
 # 1. Clone the Repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone git@github.com:Utsuk7/AI-Chatbot.git
+cd AI-Chatbot
 
 
 # 2. Install Pipenv
